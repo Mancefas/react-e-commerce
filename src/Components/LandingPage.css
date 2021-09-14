@@ -1,0 +1,11 @@
+.landing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #282c34cc;
+  height: 85vh;
+  width: 100vw;
+  background-image: url(../shop.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
