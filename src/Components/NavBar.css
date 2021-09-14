@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 80vw;
+  width: 95vw;
   font-size: 1.2rem;
 }
 
@@ -17,6 +17,6 @@
 }
 
 img {
-  height: 7rem;
+  height: 5rem;
   width: auto;
 }

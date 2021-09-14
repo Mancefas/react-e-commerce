@@ -5,7 +5,7 @@ import "./NavBar.css";
 
 function NavBar() {
   return (
-    <div className="nav">
+    <header className="nav">
       <div className="logo">
         <img src={coffeeLogo} alt="logo"></img>
       </div>
@@ -16,7 +16,7 @@ function NavBar() {
         <li>Accessories</li>
       </ul>
       <Cart />
-    </div>
+    </header>
   );
 }
 
