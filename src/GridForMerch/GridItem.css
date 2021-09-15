@@ -1,0 +1,12 @@
+.gridItem {
+  display: flex;
+  flex-direction: column;
+  height: 33vh;
+  width: 66%;
+  background-color: #584918;
+  color: rgba(255, 255, 255, 0.815);
+  text-align: center;
+  align-content: space-around;
+  justify-content: space-around;
+  border-radius: 15px;
+}
