@@ -12,6 +12,7 @@ function App() {
       <NavBar />
       <LandingPage />
       <Beans />
+      <Grinders />
     </Fragment>
   );
 }
