@@ -1,0 +1,9 @@
+.btn {
+  margin-top: 5%;
+  padding: 0.875rem 1.625rem;
+  border-radius: 20px;
+  background-color: #116158;
+  color: #fff;
+  box-shadow: none;
+  border-style: none;
+}

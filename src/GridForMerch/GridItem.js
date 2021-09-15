@@ -1,5 +1,6 @@
 import React from "react";
 import "./GridItem.css";
+import AddToCartBTN from "../Components/Cart/AddToCartBTN";
 
 function GridItem(props) {
   const price = `$${props.price.toFixed(2)}`;
@@ -10,6 +11,7 @@ function GridItem(props) {
         <h3>{name}</h3>
         <h4>{props.description}</h4>
         <h3>{price}</h3>
+        <AddToCartBTN />
       </div>
     </div>
   );
