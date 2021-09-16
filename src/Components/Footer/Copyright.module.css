@@ -1,0 +1,15 @@
+.copyright {
+  height: 10vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.copyright p {
+  margin: 0 0.5rem;
+}
+
+.copyright a {
+  text-decoration: none;
+  color: green;
+}

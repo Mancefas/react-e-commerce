@@ -1,11 +1,13 @@
-import { Fragment } from "react";
 import FooterLinks from "./FooterLinks";
+import classes from "./Footer.module.css";
+import Copyright from "./Copyright";
 
 const Footer = () => {
   return (
-    <Fragment>
+    <div className={classes.ftr}>
       <FooterLinks />
-    </Fragment>
+      <Copyright />
+    </div>
   );
 };
 
