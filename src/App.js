@@ -1,10 +1,12 @@
 import { Fragment } from "react";
 import "./App.css";
-import LandingPage from "./Components/LandingPage";
 import NavBar from "./Components/NavBar";
-import Grid from "./GridForMerch/Grid";
+import LandingPage from "./Components/LandingPage";
+import Footer from "./Components/Footer/Footer";
+
 import Beans from "./Merch/Beans";
 import Grinders from "./Merch/Grinders";
+import Machines from "./Merch/Machines";
 
 function App() {
   return (
@@ -13,6 +15,8 @@ function App() {
       <LandingPage />
       <Beans />
       <Grinders />
+      <Machines />
+      <Footer />
     </Fragment>
   );
 }
