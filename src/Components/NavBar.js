@@ -1,6 +1,7 @@
 import React from "react";
 import coffeeLogo from "../coffeeLogo.png";
-import Cart from "./Cart/Cart";
+import HeaderCart from "./Cart/HeaderCart";
+
 import "./NavBar.css";
 
 function NavBar() {
@@ -15,7 +16,7 @@ function NavBar() {
         <li>Coffee Machines</li>
         <li>Accessories</li>
       </ul>
-      <Cart />
+      <HeaderCart />
     </header>
   );
 }
