@@ -4,7 +4,7 @@ import HeaderCart from "./Cart/HeaderCart";
 
 import "./NavBar.css";
 
-function NavBar() {
+function NavBar(props) {
   return (
     <header className="nav">
       <div className="logo">
@@ -16,7 +16,7 @@ function NavBar() {
         <li>Coffee Machines</li>
         <li>Accessories</li>
       </ul>
-      <HeaderCart />
+      <HeaderCart onClicked={props.onClicked} />
     </header>
   );
 }

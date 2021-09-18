@@ -3,9 +3,9 @@ import "./HeaderCart.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 
-function Cart() {
+function Cart(props) {
   return (
-    <button className="cartBtn">
+    <button className="cartBtn" onClick={props.onClicked}>
       <span className="icon">
         <FontAwesomeIcon icon={faShoppingCart} size="2x"></FontAwesomeIcon>
       </span>

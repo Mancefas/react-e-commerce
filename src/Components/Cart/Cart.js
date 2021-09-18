@@ -1,17 +1,26 @@
-import React from "react";
-import "./Cart.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
+import Modal from "../../UI/Modal";
+import classes from "./Cart.module.css";
 
-function Cart() {
+function Cart(props) {
+  const cartItems = (
+    <ul className={classes["cart-items"]}>
+      {[{ id: "c1", name: "coffee", amount: 2, price: 12.99 }].map((item) => (
+        <li>{item.name}</li>
+      ))}
+    </ul>
+  );
+
   return (
-    <button className="cartBtn">
-      <span className="icon">
-        <FontAwesomeIcon icon={faShoppingCart} size="2x"></FontAwesomeIcon>
-      </span>
-      <span className="your-cart">Your Cart</span>
-      <span className="badge">3</span>
-    </button>
+    <Modal onClose={props.onClose}>
+      {cartItems}
+      <div className={classes.total}>
+        <span>total: $25 </span>
+        <div className={classes.actions}>
+          <button>Proceed to Checkout</button>
+          <button onClick={props.onClose}>Cancel</button>
+        </div>
+      </div>
+    </Modal>
   );
 }
 
