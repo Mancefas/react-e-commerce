@@ -2,9 +2,11 @@ import Modal from "../../UI/Modal";
 import classes from "./Cart.module.css";
 
 function Cart(props) {
+  const cartArray = [{ id: "c1", name: "coffee", price: 12.99 }];
+
   const cartItems = (
     <ul className={classes["cart-items"]}>
-      {[{ id: "c1", name: "coffee", amount: 2, price: 12.99 }].map((item) => (
+      {cartArray.map((item) => (
         <li>{item.name}</li>
       ))}
     </ul>
