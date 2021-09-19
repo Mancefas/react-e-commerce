@@ -11,7 +11,12 @@ function GridItem(props) {
         <h3>{name}</h3>
         <h4>{props.description}</h4>
         <h3>{price}</h3>
-        <AddToCartBTN />
+        <AddToCartBTN
+          id={props.id}
+          name={props.name}
+          description={props.description}
+          price={props.price}
+        />
       </div>
     </div>
   );
