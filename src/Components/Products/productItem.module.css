@@ -1,0 +1,29 @@
+.item {
+  display: flex;
+  flex-direction: column;
+  height: 33vh;
+  width: 66%;
+  background-color: #3d3927;
+  color: rgba(255, 255, 255, 0.815);
+  text-align: center;
+  align-content: space-around;
+  justify-content: space-around;
+  border-radius: 15px;
+}
+
+.item button {
+  margin-top: 5%;
+  padding: 0.875rem 1.625rem;
+  border-radius: 20px;
+  background-color: #116158;
+  color: #fff;
+  box-shadow: none;
+  border-style: none;
+}
+
+.item button:hover,
+.item button:active {
+  background-color: rgba(255, 255, 255, 0.76);
+  border-color: #5a1a01;
+  color: #116158;
+}

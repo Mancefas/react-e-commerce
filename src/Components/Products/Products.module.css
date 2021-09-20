@@ -1,0 +1,20 @@
+h2 {
+  text-align: center;
+}
+
+.itemsGrid {
+  width: 90vw;
+  height: 85vh;
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  align-content: space-evenly;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+  text-align: center;
+}
+
+.center_section {
+  display: flex;
+  justify-content: center;
+}
