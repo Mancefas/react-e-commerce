@@ -5,8 +5,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 
 function HeaderCart(props) {
-  const cartCntx = useContext(CartContext);
-  const nrOfItemsInCart = cartCntx.items.length;
+  // const cartCntx = useContext(CartContext);
+  // const nrOfItemsInCart = cartCntx.items.length;
 
   return (
     <button className="cartBtn" onClick={props.onClicked}>
@@ -14,7 +14,7 @@ function HeaderCart(props) {
         <FontAwesomeIcon icon={faShoppingCart} size="2x"></FontAwesomeIcon>
       </span>
       <span className="your-cart">Your Cart</span>
-      <span className="badge">{nrOfItemsInCart}</span>
+      <span className="badge">{}</span>
     </button>
   );
 }

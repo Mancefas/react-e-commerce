@@ -6,11 +6,6 @@ import Footer from "./Components/Footer/Footer";
 import Cart from "./Components/Cart/Cart";
 import CartProvider from "./store/CartProvider";
 import Products from "./Components/Products/Products";
-import Basket from "./Components/Cart/Basket";
-
-// import Beans from "./Merch/Beans";
-// import Grinders from "./Merch/Grinders";
-import Machines from "./Merch/Machines";
 
 import data from "./Merch/data";
 
@@ -55,19 +50,18 @@ function App() {
 
   return (
     <CartProvider>
-      {cartIsShown && <Cart onClose={hideCarthandler} />}
-      <NavBar onClicked={showCartHandler} />
+      {cartIsShown && (
+        <Cart
+          onClose={hideCarthandler}
+          onAdd={onAdd}
+          onRemove={onRemove}
+          cartItems={cartItems}
+          products={products}
+        />
+      )}
+      <NavBar onClicked={showCartHandler} onAdd={onAdd} products={products} />
       <LandingPage />
       <Products onAdd={onAdd} products={products} />
-      <Basket
-        onAdd={onAdd}
-        onRemove={onRemove}
-        cartItems={cartItems}
-        products={products}
-      ></Basket>
-      {/* <Beans />
-      <Grinders /> */}
-      <Machines />
       <Footer />
     </CartProvider>
   );
