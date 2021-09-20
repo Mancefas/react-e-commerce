@@ -5,7 +5,7 @@ import classes from "./Products.module.css";
 function Products(props) {
   const { products, onAdd } = props;
   return (
-    <section>
+    <section className={classes.section}>
       <h2>Products</h2>
       <div className={classes.center_section}>
         <div className={classes.itemsGrid}>
