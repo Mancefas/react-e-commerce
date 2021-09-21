@@ -19,7 +19,7 @@ function NavBar(props) {
       <HeaderCart
         onClicked={props.onClicked}
         products={props.products}
-        setCartItems={props.setCartItems}
+        cartItems={props.cartItems}
       />
     </header>
   );

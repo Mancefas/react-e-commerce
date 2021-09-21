@@ -14,7 +14,7 @@ function HeaderCart(props) {
         <FontAwesomeIcon icon={faShoppingCart} size="2x"></FontAwesomeIcon>
       </span>
       <span className="your-cart">Your Cart</span>
-      <span className="badge">{}</span>
+      <span className="badge">{props.cartItems.length}</span>
     </button>
   );
 }

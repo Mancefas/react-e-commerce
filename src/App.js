@@ -59,7 +59,12 @@ function App() {
           products={products}
         />
       )}
-      <NavBar onClicked={showCartHandler} onAdd={onAdd} products={products} />
+      <NavBar
+        onClicked={showCartHandler}
+        onAdd={onAdd}
+        products={products}
+        cartItems={cartItems}
+      />
       <LandingPage />
       <Products onAdd={onAdd} products={products} />
       <Footer />
