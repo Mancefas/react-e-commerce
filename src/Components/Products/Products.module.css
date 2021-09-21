@@ -1,9 +1,10 @@
 .section {
   background-color: rgb(126, 126, 126);
   height: fit-content;
+  padding: 2% 0%;
 }
 
-h2 {
+.section h2 {
   text-align: center;
 }
 
