@@ -14,6 +14,13 @@ function Cart(props) {
   //     ))}
   //   </ul>
   // );
+  const itemsPrices = [];
+  const addItemsPrices = cartItems.forEach((el) =>
+    itemsPrices.push(el.price * el.qty)
+  );
+  const totalPrice = itemsPrices.reduce((a, b) => {
+    return a + b;
+  }, 0);
 
   return (
     <Modal onClose={props.onClose}>
@@ -50,7 +57,7 @@ function Cart(props) {
       </aside>
       {/* {cartItems} */}
       <div className={classes.total}>
-        <span>total: $25 </span>
+        <span>Total: ${totalPrice} </span>
         <div className={classes.actions}>
           <button>Proceed to Checkout</button>
           <button onClick={props.onClose}>Cancel</button>
