@@ -69,3 +69,8 @@
   background-color: #8a2b06;
   color: white;
 }
+
+.addRemove button {
+  padding-right: 0.2rem;
+  background-color: #fef9f5;
+}

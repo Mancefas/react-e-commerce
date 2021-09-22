@@ -1,7 +1,11 @@
 .section {
-  background-color: rgb(126, 126, 126);
-  height: fit-content;
+  background-color: #ffffff;
+  height: 85vh;
+  width: 100vw;
   padding: 2% 0%;
+  background-image: url(../../shop.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .section h2 {

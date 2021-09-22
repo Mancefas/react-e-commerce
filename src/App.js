@@ -12,6 +12,17 @@ import data from "./Merch/data";
 function App() {
   const [cartIsShown, setCartIsShown] = useState(false);
 
+  const [dataSorted, setDataSorted] = useState([]);
+
+  const sortMerch = (type) => {
+    const sorted = [...products].filter((item) => item.categorie === type);
+    setDataSorted(sorted);
+  };
+
+  const clickedLogo = () => {
+    setDataSorted([]);
+  };
+
   const [cartItems, setCartItems] = useState([]);
   const { products } = data;
   const onAdd = (product) => {
@@ -64,9 +75,13 @@ function App() {
         onAdd={onAdd}
         products={products}
         cartItems={cartItems}
+        sortMerch={sortMerch}
+        clickedLogo={clickedLogo}
       />
-      <LandingPage />
-      <Products onAdd={onAdd} products={products} />
+      {dataSorted.length === 0 && <LandingPage />}
+      {dataSorted.length !== 0 && (
+        <Products onAdd={onAdd} products={dataSorted} />
+      )}
       <Footer />
     </CartProvider>
   );

@@ -38,21 +38,12 @@ function Cart(props) {
               <div className={classes.item_qty} key={item.id}>
                 <div className={classes.total}>{item.name.toUpperCase()}</div>
                 <h3>{item.qty}</h3>
-                <div>
-                  <button
-                    className={classes.btn}
-                    onClick={() => onRemove(item)}
-                    className="remove"
-                  >
-                    {" "}
-                    <FontAwesomeIcon icon={faMinusCircle}></FontAwesomeIcon>
-                  </button>{" "}
-                  <button
-                    className={classes.btn}
-                    onClick={() => onAdd(item)}
-                    className="add"
-                  >
+                <div className={classes.addRemove}>
+                  <button onClick={() => onAdd(item)} className="add">
                     <FontAwesomeIcon icon={faPlusCircle}></FontAwesomeIcon>
+                  </button>
+                  <button onClick={() => onRemove(item)} className="remove">
+                    <FontAwesomeIcon icon={faMinusCircle}></FontAwesomeIcon>
                   </button>
                 </div>
               </div>
