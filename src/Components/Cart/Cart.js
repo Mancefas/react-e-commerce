@@ -14,11 +14,16 @@ function Cart(props) {
   //     ))}
   //   </ul>
   // );
-  const itemsPrices = [];
-  const addItemsPrices = cartItems.forEach((el) =>
-    itemsPrices.push(el.price * el.qty)
-  );
-  const totalPrice = itemsPrices.reduce((a, b) => {
+  // const itemsPrices = [];
+  // const addItemsPrices = cartItems.forEach((el) =>
+  //   itemsPrices.push(el.price * el.qty)
+  // );
+  // const totalPrice = itemsPrices.reduce((a, b) => {
+  //   return a + b;
+  // }, 0);
+
+  const addItemsPrices = cartItems.map((item) => item.price * item.qty);
+  const totalPrice = addItemsPrices.reduce((a, b) => {
     return a + b;
   }, 0);
 
