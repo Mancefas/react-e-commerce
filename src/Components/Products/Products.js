@@ -1,6 +1,7 @@
 import React from "react";
 import ProductItem from "./ProductItem";
 import classes from "./Products.module.css";
+import FreeShipping from "./FreeShipping";
 
 function Products(props) {
   const { products, onAdd } = props;
@@ -18,6 +19,7 @@ function Products(props) {
           ))}
         </div>
       </div>
+      <FreeShipping />
     </section>
   );
 }

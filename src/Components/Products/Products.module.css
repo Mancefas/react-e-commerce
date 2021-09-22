@@ -1,11 +1,14 @@
 .section {
   background-color: #ffffff;
-  height: 85vh;
+  height: 115vh;
   width: 100vw;
-  padding: 2% 0%;
+  /* padding: 2% 0%; */
   background-image: url(../../shop.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .section h2 {

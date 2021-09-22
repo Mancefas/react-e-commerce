@@ -1,0 +1,14 @@
+.section {
+  background-color: #ffffff;
+  height: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+@media screen and (max-width: 500px) {
+  .section {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
