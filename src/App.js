@@ -8,6 +8,7 @@ import CartProvider from "./store/CartProvider";
 import Products from "./Components/Products/Products";
 
 import data from "./Merch/data";
+import BlogSection from "./Components/Blog/BlogSection";
 
 function App() {
   const [cartIsShown, setCartIsShown] = useState(false);
@@ -82,6 +83,7 @@ function App() {
       {dataSorted.length !== 0 && (
         <Products onAdd={onAdd} products={dataSorted} />
       )}
+      <BlogSection />
       <Footer />
     </CartProvider>
   );
