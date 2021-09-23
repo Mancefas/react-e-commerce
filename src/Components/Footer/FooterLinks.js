@@ -4,12 +4,12 @@ const FooterLinks = () => {
   return (
     <section className={classes.links}>
       <div>
-        <h3>Categories</h3>
+        <h3>Important</h3>
         <ul>
-          <li>Coffee Beans</li>
-          <li>Coffee grinders</li>
-          <li>Coffee Machines</li>
-          <li>Accessories</li>
+          <li>Privacy policy</li>
+          <li>Cookie policy</li>
+          <li>Term and Conditions</li>
+          <li>Help section</li>
         </ul>
       </div>
 
