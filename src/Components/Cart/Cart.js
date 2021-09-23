@@ -23,9 +23,11 @@ function Cart(props) {
   // }, 0);
 
   const addItemsPrices = cartItems.map((item) => item.price * item.qty);
-  const totalPrice = addItemsPrices.reduce((a, b) => {
-    return a + b;
-  }, 0);
+  const totalPrice = addItemsPrices
+    .reduce((a, b) => {
+      return a + b;
+    }, 0)
+    .toFixed(2);
 
   return (
     <Modal onClose={props.onClose}>
