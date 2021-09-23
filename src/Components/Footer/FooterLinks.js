@@ -22,7 +22,7 @@ const FooterLinks = () => {
         </ul>
       </div>
 
-      <div>
+      <div className={classes.about}>
         <h3>About Us</h3>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum dicta

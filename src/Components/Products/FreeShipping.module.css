@@ -1,14 +1,22 @@
 .section {
   background-color: #ffffff;
-  height: 20vh;
+  height: fit-content;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  padding: 1rem 0rem;
 }
 
 @media screen and (max-width: 500px) {
   .section {
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    height: fit-content;
+  }
+  .item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
   }
 }

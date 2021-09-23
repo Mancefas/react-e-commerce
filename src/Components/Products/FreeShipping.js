@@ -6,11 +6,11 @@ import { faWallet } from "@fortawesome/free-solid-svg-icons";
 const FreeShipping = () => {
   return (
     <div className={classes.section}>
-      <div>
+      <div className={classes.item}>
         <FontAwesomeIcon icon={faShippingFast} size="2x" />
         <h4>Free shipping on all orders over $30</h4>
       </div>
-      <div>
+      <div className={classes.item}>
         <FontAwesomeIcon icon={faWallet} size="2x" />
         <h4>We accept - Paypal, Stripe, Visa, Mastercard</h4>
       </div>

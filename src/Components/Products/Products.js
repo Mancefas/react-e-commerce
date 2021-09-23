@@ -19,7 +19,9 @@ function Products(props) {
           ))}
         </div>
       </div>
-      <FreeShipping />
+      <div className={classes.last}>
+        <FreeShipping />
+      </div>
     </section>
   );
 }

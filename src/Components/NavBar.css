@@ -17,6 +17,7 @@
 }
 
 .nav img {
+  cursor: pointer;
   height: 5rem;
   width: auto;
 }
@@ -26,4 +27,5 @@
   border: none;
   background-color: #ffffff;
   cursor: pointer;
+  color: #6b5614;
 }

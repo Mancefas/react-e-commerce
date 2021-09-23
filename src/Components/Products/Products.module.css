@@ -8,11 +8,13 @@
   background-size: cover;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 .section h2 {
   text-align: center;
+  color: #ffffff;
+  font-size: 3rem;
 }
 
 .itemsGrid {
@@ -30,4 +32,26 @@
 .center_section {
   display: flex;
   justify-content: center;
+}
+
+.last {
+  margin-top: auto;
+}
+
+@media screen and (max-width: 800px) {
+  .itemsGrid {
+    grid-template-columns: 1fr 1fr 1fr;
+    width: fit-content;
+    width: 30vw;
+    word-wrap: break-word;
+  }
+  .section h2 {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .itemsGrid {
+    grid-template-columns: 1fr 1fr;
+  }
 }
