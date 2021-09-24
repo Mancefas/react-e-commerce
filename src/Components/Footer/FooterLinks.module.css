@@ -1,6 +1,6 @@
 .links {
   width: 100vw;
-  height: 15vh;
+  height: fit-content;
 
   display: flex;
   flex-direction: row;
