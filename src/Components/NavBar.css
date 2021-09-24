@@ -29,3 +29,20 @@
   cursor: pointer;
   color: #6b5614;
 }
+
+@media screen and (max-width: 750px) {
+  .nav {
+    flex-direction: column;
+    padding-bottom: 0.5rem;
+  }
+  .nav ul {
+    flex-direction: column;
+  }
+
+  .nav li {
+    padding: 0.5rem;
+  }
+  .nav ul button {
+    font-size: 1.2rem;
+  }
+}
