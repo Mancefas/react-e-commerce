@@ -1,4 +1,3 @@
-import { Fragment } from "react/cjs/react.production.min";
 import classes from "./BlogItem.module.css";
 import blog1 from "./Img/blog1.jpg";
 import blog2 from "./Img/blog2.jpg";
