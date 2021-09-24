@@ -1,8 +1,9 @@
-import React, { useDebugValue } from "react";
+import React from "react";
 import coffeeLogo from "../coffeeLogo.png";
 import HeaderCart from "./Cart/HeaderCart";
 
 import "./NavBar.css";
+// import HamburgerMenu from "./Navbar/HamburgerMenu";
 
 // 1. each button has own Value - done
 // 2. when pressed array is sorted by that value - done
@@ -46,6 +47,10 @@ function NavBar(props) {
           <button value="accessories">Accessories</button>
         </li> */}
       </ul>
+      {/* <HamburgerMenu
+        onHamburgerPress={props.onHamburgerPress}
+        showMenu={props.showMenu}
+      /> */}
       <HeaderCart
         onClicked={props.onClicked}
         products={props.products}
