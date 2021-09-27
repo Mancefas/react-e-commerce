@@ -31,7 +31,7 @@ const FooterLinks = () => {
       </div>
 
       <div>
-        <h3>Conatct Us</h3>
+        <h3>Contact Us</h3>
         <p>4154 Pratt Avenuo</p>
         <p>Regan</p>
         <p>North Dakota</p>
