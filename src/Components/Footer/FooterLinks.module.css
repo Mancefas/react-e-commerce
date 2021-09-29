@@ -10,6 +10,10 @@
 
 .links ul {
   list-style: none;
+  cursor: pointer;
+}
+.links li:hover {
+  color: green;
 }
 
 .about {

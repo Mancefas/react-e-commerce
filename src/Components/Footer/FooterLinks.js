@@ -1,15 +1,15 @@
 import classes from "./FooterLinks.module.css";
 
-const FooterLinks = () => {
+const FooterLinks = (props) => {
   return (
     <section className={classes.links}>
       <div>
         <h3>Important</h3>
         <ul>
-          <li>Privacy policy</li>
-          <li>Cookie policy</li>
-          <li>Term and Conditions</li>
-          <li>Help section</li>
+          <li onClick={props.onClick}>Privacy policy</li>
+          <li onClick={props.onClick}>Cookie policy</li>
+          <li onClick={props.onClick}>Term and Conditions</li>
+          <li onClick={props.onClick}>Help section</li>
         </ul>
       </div>
 

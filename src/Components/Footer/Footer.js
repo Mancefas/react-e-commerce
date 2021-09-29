@@ -2,10 +2,10 @@ import FooterLinks from "./FooterLinks";
 import classes from "./Footer.module.css";
 import Copyright from "./Copyright";
 
-const Footer = () => {
+const Footer = (props) => {
   return (
     <div className={classes.ftr}>
-      <FooterLinks />
+      <FooterLinks onClick={props.onClick} />
       <Copyright />
     </div>
   );
