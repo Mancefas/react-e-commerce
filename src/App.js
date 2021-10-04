@@ -9,18 +9,9 @@ import Products from "./Components/Products/Products";
 
 import data from "./Merch/data";
 import BlogSection from "./Components/Blog/BlogSection";
-import PolicySample from "./Components/Footer/Policy/PolicySample";
 
 function App() {
   const [cartIsShown, setCartIsShown] = useState(false);
-
-  const [policyShown, setPolicyShown] = useState(false);
-  const showPolicyHandler = () => {
-    setPolicyShown(true);
-  };
-  const closePolicyhandler = () => {
-    setPolicyShown(false);
-  };
 
   const [dataSorted, setDataSorted] = useState([]);
 
@@ -93,13 +84,7 @@ function App() {
         <Products onAdd={onAdd} products={dataSorted} />
       )}
       <BlogSection />
-      {policyShown && (
-        <PolicySample
-          onClicked={showPolicyHandler}
-          onClose={closePolicyhandler}
-        />
-      )}
-      <Footer onClick={showPolicyHandler} />
+      <Footer />
     </CartProvider>
   );
 }

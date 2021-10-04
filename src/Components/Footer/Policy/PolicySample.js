@@ -12,7 +12,7 @@ function PolicySample(props) {
           <div className={classes.x}>
             <FontAwesomeIcon onClick={props.onClose} icon={faTimesCircle} />
           </div>
-          <h3>Our policy</h3>
+          <h3>{props.policy}</h3>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
             efficitur faucibus commodo. Donec consectetur sem et nisl sagittis,

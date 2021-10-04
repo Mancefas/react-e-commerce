@@ -10,10 +10,10 @@
 }
 
 .policy {
-  background: #efefef;
+  background: #ffff;
   border-radius: 15px;
   height: fit-content;
-  padding: 2rem;
+  padding: 1rem;
   width: 50vw;
   display: flex;
   flex-direction: column;
