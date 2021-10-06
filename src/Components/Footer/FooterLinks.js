@@ -44,7 +44,6 @@ const FooterLinks = () => {
           <ul>
             <li onClick={cntx.showRegFormHandler}>Register</li>
             <li>Log in</li>
-            <li>Cart</li>
           </ul>
         </div>
 
