@@ -1,5 +1,4 @@
 import { useState, useContext } from "react";
-import { RegContextProvider } from "../../store/reg-context";
 import classes from "./FooterLinks.module.css";
 import PolicySample from "./Policy/PolicySample";
 import RegContext from "../../store/reg-context";

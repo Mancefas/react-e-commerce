@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import Section from "../Helpers/Section";
 import classes from "./Register.module.css";
 import RegContext from "../../store/reg-context";

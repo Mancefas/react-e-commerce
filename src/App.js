@@ -4,7 +4,6 @@ import NavBar from "./Components/NavBar";
 import LandingPage from "./Components/LandingPage";
 import Footer from "./Components/Footer/Footer";
 import Cart from "./Components/Cart/Cart";
-import CartProvider from "./store/CartProvider";
 import Products from "./Components/Products/Products";
 
 import data from "./Merch/data";
@@ -83,12 +82,13 @@ function App() {
         sortMerch={sortMerch}
         clickedLogo={clickedLogo}
       />
-      {context.regFormShown && <Register />}
-      {dataSorted.length === 0 && <LandingPage />}
-      {dataSorted.length !== 0 && (
+      {dataSorted.length === 0 ? (
+        <LandingPage />
+      ) : (
         <Products onAdd={onAdd} products={dataSorted} />
       )}
-      <BlogSection />
+      {context.regFormShown && <Register />}
+      {!context.regFormShown && <BlogSection />}
       <Footer />
     </>
   );
