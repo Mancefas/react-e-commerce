@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import "./App.css";
 import NavBar from "./Components/NavBar";
 import LandingPage from "./Components/LandingPage";
@@ -9,6 +9,8 @@ import Products from "./Components/Products/Products";
 
 import data from "./Merch/data";
 import BlogSection from "./Components/Blog/BlogSection";
+import Register from "./Components/LogIn/Register";
+import RegContext from "./store/reg-context";
 
 function App() {
   const [cartIsShown, setCartIsShown] = useState(false);
@@ -60,8 +62,10 @@ function App() {
     setCartIsShown(false);
   };
 
+  const context = useContext(RegContext);
+
   return (
-    <CartProvider>
+    <>
       {cartIsShown && (
         <Cart
           onClose={hideCarthandler}
@@ -79,13 +83,14 @@ function App() {
         sortMerch={sortMerch}
         clickedLogo={clickedLogo}
       />
+      {context.regFormShown && <Register />}
       {dataSorted.length === 0 && <LandingPage />}
       {dataSorted.length !== 0 && (
         <Products onAdd={onAdd} products={dataSorted} />
       )}
       <BlogSection />
       <Footer />
-    </CartProvider>
+    </>
   );
 }
 

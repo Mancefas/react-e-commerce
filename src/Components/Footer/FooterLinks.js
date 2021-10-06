@@ -1,6 +1,8 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { RegContextProvider } from "../../store/reg-context";
 import classes from "./FooterLinks.module.css";
 import PolicySample from "./Policy/PolicySample";
+import RegContext from "../../store/reg-context";
 
 const FooterLinks = () => {
   const [policyShown, setPolicyShown] = useState("");
@@ -11,7 +13,7 @@ const FooterLinks = () => {
     setPolicyShown("");
   };
 
-  console.log(policyShown.length);
+  const cntx = useContext(RegContext);
 
   return (
     <div>
@@ -40,7 +42,7 @@ const FooterLinks = () => {
         <div>
           <h3>MY Account</h3>
           <ul>
-            <li>Register</li>
+            <li onClick={cntx.showRegFormHandler}>Register</li>
             <li>Log in</li>
             <li>Cart</li>
           </ul>

@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import Section from "../Helpers/Section";
 import classes from "./Register.module.css";
+import RegContext from "../../store/reg-context";
 
 const Register = () => {
+  const cntx = useContext(RegContext);
+
   return (
     <Section>
       <div className={classes.register}>
@@ -52,9 +55,15 @@ const Register = () => {
               Create new account
             </button>
 
-            <button type="button" className={classes.btn2}>
-              Cancel
-            </button>
+            {cntx.regFormShown && (
+              <button
+                onClick={cntx.hideRegFormHandler}
+                type="button"
+                className={classes.btn2}
+              >
+                Cancel
+              </button>
+            )}
           </div>
         </form>
       </div>
