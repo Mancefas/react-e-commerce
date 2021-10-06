@@ -1,0 +1,82 @@
+.register {
+  height: fit-content;
+  width: 60vw;
+  padding: 2rem 0rem;
+
+  outline: solid 2px #e9e7e7;
+}
+
+.register h2 {
+  margin-bottom: 2rem;
+}
+
+.register div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.register label {
+  display: flex;
+  width: 50%;
+  align-items: flex-start;
+}
+
+.register input {
+  margin: 0.75rem 0rem;
+  padding-top: 15px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  width: 50%;
+  background: #efefef;
+  border: none;
+  border-radius: 7px;
+}
+
+.register .btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.register button {
+  font: inherit;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid #0c0401;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  margin: 0rem 2%;
+}
+
+.register button:hover,
+.register button:active {
+  background-color: #336a64;
+  border-color: #336a64;
+  color: white;
+}
+
+.register .btn2:hover,
+.register .btn2:active {
+  background-color: #cc535d;
+  border-color: #336a64;
+  color: white;
+}
+
+.register .button {
+  background-color: #8a2b06;
+  color: white;
+}
+
+@media screen and (max-width: 500px) {
+  .register {
+    width: 80vw;
+  }
+
+  .register h2 {
+    text-align: center;
+  }
+  .register input {
+    width: 70%;
+  }
+}
