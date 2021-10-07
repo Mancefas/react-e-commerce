@@ -12,6 +12,7 @@ import Register from "./Components/LogIn/Register";
 import RegContext from "./store/reg-context";
 
 function App() {
+  const context = useContext(RegContext);
   const [cartIsShown, setCartIsShown] = useState(false);
 
   const [dataSorted, setDataSorted] = useState([]);
@@ -19,10 +20,19 @@ function App() {
   const sortMerch = (type) => {
     const sorted = [...products].filter((item) => item.categorie === type);
     setDataSorted(sorted);
+    context.landingPageHideHander();
+    if (context.regFormShown === true) {
+      context.hideRegFormHandler();
+      context.landingPageHideHander();
+    }
   };
 
   const clickedLogo = () => {
     setDataSorted([]);
+    context.landPageHandler();
+    if (context.regFormShown === true) {
+      context.hideRegFormHandler();
+    }
   };
 
   const [cartItems, setCartItems] = useState([]);
@@ -61,8 +71,6 @@ function App() {
     setCartIsShown(false);
   };
 
-  const context = useContext(RegContext);
-
   return (
     <>
       {cartIsShown && (
@@ -82,9 +90,8 @@ function App() {
         sortMerch={sortMerch}
         clickedLogo={clickedLogo}
       />
-      {dataSorted.length === 0 ? (
-        <LandingPage />
-      ) : (
+      {context.landingPageShown && <LandingPage />}
+      {dataSorted.length !== 0 && (
         <Products onAdd={onAdd} products={dataSorted} />
       )}
       {context.regFormShown && <Register />}
