@@ -2,14 +2,23 @@ import { useState, useContext } from "react";
 import classes from "./FooterLinks.module.css";
 import PolicySample from "./Policy/PolicySample";
 import RegContext from "../../store/reg-context";
+import LogIn from "../LogIn/LogIn";
 
-const FooterLinks = () => {
+const FooterLinks = (props) => {
   const [policyShown, setPolicyShown] = useState("");
   const showPolicyHandler = (event) => {
     setPolicyShown(event);
   };
   const closePolicyhandler = () => {
     setPolicyShown("");
+  };
+
+  const [loginShown, setLoginShown] = useState(false);
+  const showLoginHandler = () => {
+    setLoginShown(true);
+  };
+  const hideLoginHanlder = () => {
+    setLoginShown(false);
   };
 
   const cntx = useContext(RegContext);
@@ -19,6 +28,7 @@ const FooterLinks = () => {
       {policyShown.length > 0 && (
         <PolicySample onClose={closePolicyhandler} policy={policyShown} />
       )}
+      {loginShown && <LogIn onClose={hideLoginHanlder} />}
       <section className={classes.links}>
         <div>
           <h3>Important</h3>
@@ -42,7 +52,7 @@ const FooterLinks = () => {
           <h3>MY Account</h3>
           <ul>
             <li onClick={cntx.showRegFormHandler}>Register</li>
-            <li>Log in</li>
+            <li onClick={showLoginHandler}>Log in</li>
           </ul>
         </div>
 
