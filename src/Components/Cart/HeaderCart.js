@@ -8,13 +8,19 @@ function HeaderCart(props) {
   // const cartCntx = useContext(CartContext);
   // const nrOfItemsInCart = cartCntx.items.length;
 
+  const noOfItems = props.cartItems
+    .map((e) => e.qty)
+    .reduce((a, b) => {
+      return a + b;
+    }, 0);
+
   return (
     <button className="cartBtn" onClick={props.onClicked}>
       <span className="icon">
         <FontAwesomeIcon icon={faShoppingCart} size="2x"></FontAwesomeIcon>
       </span>
       <span className="your-cart">Your Cart</span>
-      <span className="badge">{props.cartItems.length}</span>
+      <span className="badge">{noOfItems}</span>
     </button>
   );
 }
