@@ -19,12 +19,13 @@ const LogIn = (props) => {
         <div>
           <label for="password">Password </label>
           <input type="text" id="password" placeholder="Enter password"></input>
+          <p>*doesn't work, because it is just for showing purpose...</p>
         </div>
 
         <div className={classes.btns}>
           <button type="submit">Log in</button>
 
-          <a href="#">Lost your password?</a>
+          <button>Lost your password?</button>
         </div>
       </form>
     </Modal>

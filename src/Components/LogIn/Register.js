@@ -49,6 +49,9 @@ const Register = () => {
               placeholder="Enter Your password"
             ></input>
           </div>
+          <div>
+            <p>*doesn't work, because it is just for showing purpose...</p>
+          </div>
 
           <div className={classes.btns}>
             <button type="submit" className={classes.btn}>

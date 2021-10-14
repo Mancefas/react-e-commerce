@@ -68,6 +68,11 @@
   color: white;
 }
 
+.register p {
+  font-size: 0.8rem;
+  padding: 0.5rem 0rem;
+}
+
 @media screen and (max-width: 500px) {
   .register {
     width: 80vw;
